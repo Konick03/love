@@ -20,7 +20,6 @@
             background: linear-gradient(90deg, rgba(0,103,231,1) 0%, rgba(241,103,255,1) 43%, rgba(165,8,217,1) 100%);
         }
         div {
-            position: relative;
             margin: 0 auto;
             width: 700px;
         }
@@ -54,6 +53,7 @@
         }
 
         .heart {
+            position: relative;
             animation-name: love;
             animation-duration: 500ms;
             animation-iteration-count: infinite;
@@ -67,6 +67,31 @@
             }
             to {
                 transform: scale(1);
+            }
+        }
+
+        @media (max-width: 400px) {
+            div {
+                width: 280px;
+            }
+
+            .text {
+                font-size: 20px;
+            }
+
+            .heart::after,
+            .heart::before {
+                width: 80px;
+                height: 120px;
+                top: 50px;
+            }
+
+            .heart::before {
+                left: 135px;
+            }
+
+            .heart::after {
+                left: 55px;
             }
         }
     </style>
