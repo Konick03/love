@@ -17,10 +17,11 @@
 
     <style>
         body {
+            margin: auto;
             background: linear-gradient(90deg, rgba(0,103,231,1) 0%, rgba(241,103,255,1) 43%, rgba(165,8,217,1) 100%);
         }
         div {
-            margin: 0 auto;
+            margin: auto;
             width: 700px;
         }
         .text {
@@ -54,6 +55,8 @@
 
         .heart {
             position: relative;
+            width: 200px;
+            height: 200px;
             animation-name: love;
             animation-duration: 500ms;
             animation-iteration-count: infinite;
@@ -70,12 +73,13 @@
             }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 430px) {
             div {
                 width: 280px;
             }
 
             .text {
+                margin-top: 120px;
                 font-size: 20px;
             }
 
@@ -87,11 +91,11 @@
             }
 
             .heart::before {
-                left: 135px;
+                left: 100px;
             }
 
             .heart::after {
-                left: 55px;
+                left: 20px;
             }
         }
     </style>
